@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "title": "曲库标签管理",
+    "icon": "el-icon-help",
+    "iconSelect": "el-icon-s-help",
+    "parent": ["合唱曲库管理", "合唱曲库管理"]
+  },
+  "permission": {
+    "basic": {
+      "getTree": "get:/v1/apis/tree",
+      "getTableList": "get:/v2/apis/tableList"
+    },
+    "fuc": {
+      "add": {
+        "add": "post:/platform/v1/add",
+        "getSelecte": "get:/v1/apis/getlist3"
+      },
+      "remove": "delete:/v2/apis/del"
+    }
+  }
+}
