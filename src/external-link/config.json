@@ -1,15 +1,9 @@
 {
   "nav": {
-    "title": "曲库标签管理",
+    "title": "用户信息",
     "icon": "el-icon-help",
     "iconSelect": "el-icon-s-help",
-    "parent": [
-      "合唱曲库管理",
-      "合唱曲库管理"
-    ],
-    "lazy": true,
-    "noCache": true,
-    "affix": true
+    "parent": ["合唱曲库管理", "合唱曲库管理"]
   },
   "permission": {
     "basic": {
