@@ -23,5 +23,8 @@
       },
       "remove": "delete:/v2/apis/del"
     }
+  },
+  "store":{
+    "userName":"123123"
   }
 }
