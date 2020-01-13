@@ -1,5 +1,7 @@
 export default {
   getTable () {
-    return this.get(this.apiPath.getTable).then(d => d.data)
+    ajax(this.bascic.getTree, {
+      path, query, data
+    }).then(d => d.data)
   }
 }
