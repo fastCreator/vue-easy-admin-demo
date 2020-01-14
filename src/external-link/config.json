@@ -1,9 +1,7 @@
 {
   "nav": {
     "title": "用户信息",
-    "icon": "el-icon-help",
-    "iconSelect": "el-icon-s-help",
-    "parent": ["合唱曲库管理", "合唱曲库管理"]
+    "glob":true
   },
   "permission": {
     "basic": {

@@ -1,5 +1,18 @@
 {
   "title": "Vue Admin",
+  "lang": {
+    "defalut": "en",
+    "list": [
+      {
+        "label": "中文",
+        "value": "zh-CN"
+      },
+      {
+        "label": "English",
+        "value": "en"
+      }
+    ]
+  },
   "setting": {
     "logo": true,
     "fixedHeader": true,
@@ -7,6 +20,7 @@
     "theme": "",
     "show": true
   },
-  "globData":{
+  "globData": {
+    "globName": "XXXXX"
   }
 }
