@@ -1,0 +1,53 @@
+{
+    "name": "选择器",
+    "doc": [
+        {
+            "title": "attributes",
+            "table": [
+                {
+                    "prop": "prop",
+                    "label": "参数"
+                },
+                {
+                    "prop": "des",
+                    "label": "说明"
+                },
+                {
+                    "prop": "type",
+                    "label": "类型"
+                },
+                {
+                    "prop": "options",
+                    "label": "可选值"
+                },
+                {
+                    "prop": "default",
+                    "label": "默认值"
+                }
+            ],
+            "data": [
+                {
+                    "prop": "options",
+                    "des": "选项值",
+                    "type": "Array,Function",
+                    "options": "-",
+                    "default": "[]"
+                },
+                {
+                    "prop": "optionsProps",
+                    "des": "选项Prop",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "{label:'label',value:'value'}"
+                },
+                {
+                    "prop": "其他属性及事件",
+                    "des": "同el-select一致",
+                    "type": "-",
+                    "options": "-",
+                    "default": "-"
+                }
+            ]
+        }
+    ]
+}

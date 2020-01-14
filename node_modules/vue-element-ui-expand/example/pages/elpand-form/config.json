@@ -1,0 +1,168 @@
+{
+    "name": "表单",
+    "doc": [
+        {
+            "title": "attributes",
+            "table": [
+                {
+                    "prop": "prop",
+                    "label": "参数"
+                },
+                {
+                    "prop": "des",
+                    "label": "说明"
+                },
+                {
+                    "prop": "type",
+                    "label": "类型"
+                },
+                {
+                    "prop": "options",
+                    "label": "可选值"
+                },
+                {
+                    "prop": "default",
+                    "label": "默认值"
+                }
+            ],
+            "data": [
+                {
+                    "prop": "dialog",
+                    "des": "是否开启弹出窗",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "dialog.on",
+                    "des": "弹出窗事件",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "dialog.on",
+                    "des": "弹出窗属性",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "form",
+                    "des": "表单",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "form.data",
+                    "des": "表单数据",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "form.on",
+                    "des": "表单事件",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "form.bind",
+                    "des": "表单属性",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "form.submit",
+                    "des": "提交数据时回调",
+                    "type": "Function",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "form.list",
+                    "des": "表单项",
+                    "type": "Array",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "form.list.prop",
+                    "des": "el-form-item绑定prop",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "form.list.label",
+                    "des": "el-form-item绑定名称",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "form.list.itemBind",
+                    "des": "el-form-item属性",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "form.list.itemOn",
+                    "des": "el-form-item事件",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "form.list.tag",
+                    "des": "表单项组件名",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "form.list.bind",
+                    "des": "组件属性",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "form.list.on",
+                    "des": "组件事件",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                }
+            ]
+        },
+        {
+            "title": "events",
+            "table": [
+                {
+                    "prop": "event",
+                    "label": "事件名称"
+                },
+                {
+                    "prop": "des",
+                    "label": "说明"
+                },
+                {
+                    "prop": "call",
+                    "label": "回调参数"
+                }
+            ],
+            "data": [
+                {
+                    "event": "-",
+                    "des": "-",
+                    "call": "-"
+                }
+            ]
+        }
+    ]
+}

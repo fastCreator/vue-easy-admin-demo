@@ -1,0 +1,369 @@
+{
+    "name": "表格",
+    "doc": [
+        {
+            "title": "attributes",
+            "table": [
+                {
+                    "prop": "prop",
+                    "label": "参数"
+                },
+                {
+                    "prop": "des",
+                    "label": "说明"
+                },
+                {
+                    "prop": "type",
+                    "label": "类型"
+                },
+                {
+                    "prop": "options",
+                    "label": "可选值"
+                },
+                {
+                    "prop": "default",
+                    "label": "默认值"
+                }
+            ],
+            "data": [
+                {
+                    "prop": "tableSort",
+                    "des": "开启table拖拽排序",
+                    "type": "Function(data, tableData, cb)",
+                    "options": "-",
+                    "default": "false"
+                },
+                {
+                    "prop": "createElement",
+                    "des": "为了子组件渲染父中components",
+                    "type": "$createElement",
+                    "options": "-",
+                    "default": "false"
+                },
+                {
+                    "prop": "tableFilter",
+                    "des": "是否显示table过滤项",
+                    "type": "Boolean",
+                    "options": "-",
+                    "default": "false"
+                },
+                {
+                    "prop": "tableExport",
+                    "des": "table导出功能",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "tableExport.tableExport",
+                    "des": "table导出项过滤器",
+                    "type": "Function(row,prop)",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "tableExport.filename",
+                    "des": "导出文件名",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "tableExport.autoWidth",
+                    "des": "是否自适应宽度",
+                    "type": "Boolean",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "tableExport.bookTypes",
+                    "des": "可选下载文件类型",
+                    "type": "Array",
+                    "options": "xlsx,xlsm,xlsb,biff8,biff5,biff2,xlml,ods,fods,csv,txt,sylk,html,dif,dbf,rtf,prn,eth",
+                    "default": "-"
+                },
+                {
+                    "prop": "filters",
+                    "des": "过滤项",
+                    "type": "Array",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "label",
+                    "des": "过滤项名称",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "filters.prop",
+                    "des": "过滤项prop",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "filters.tag",
+                    "des": "组件tag",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "filters.bind",
+                    "des": "组件绑定属性",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "{}"
+                },
+                {
+                    "prop": "filters.on",
+                    "des": "组件绑定事件",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "{}"
+                },
+                {
+                    "prop": "table",
+                    "des": "表格配置",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.data",
+                    "des": "search接口获取table数据的key",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.bind",
+                    "des": "el-table绑定的属性值",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.bind.rowKey",
+                    "des": "列表数据唯一标识key",
+                    "type": "String",
+                    "options": "必填",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.on",
+                    "des": "el-table绑定的事件",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.columns",
+                    "des": "el-table对应列",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.columns.type",
+                    "des": "封装好的表格内容类型",
+                    "type": "String",
+                    "options": "selection,time,image,color,audio,btns",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.columns.component",
+                    "des": "绑定组件,自动于tableData绑定值",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.columns.component.tag",
+                    "des": "绑定组件名称",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.columns.component.bind",
+                    "des": "绑定组件props",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.columns.component.on",
+                    "des": "绑定组件事件",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.columns.label",
+                    "des": "Table-column label",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.columns.prop",
+                    "des": "Table-column prop",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.columns.prop",
+                    "des": "Table-column 其他绑定值",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.columns.on",
+                    "des": "Table-column 其他绑定值事件",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.columns.render",
+                    "des": "Table-column 渲染函数",
+                    "type": "Function",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "table.columns.child",
+                    "des": "Table-column 分子级",
+                    "type": "table.columns",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "operations",
+                    "des": "操作按钮组",
+                    "type": "Array",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "operations.label",
+                    "des": "操作按钮名称",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "operations.call",
+                    "des": "操作按钮回调函数",
+                    "type": "String",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "operations.bind",
+                    "des": "el-button绑定属性",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "operations.on",
+                    "des": "el-button绑定事件",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "pagination",
+                    "des": "分页配置",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "pagination.total",
+                    "des": "search函数返回所有条目key",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "pagination.currentPage",
+                    "des": "当前页码",
+                    "type": "Number",
+                    "options": "-",
+                    "default": "1"
+                },
+                {
+                    "prop": "pagination.currentPage",
+                    "des": "当前页码",
+                    "type": "Number",
+                    "options": "-",
+                    "default": 1
+                },
+                {
+                    "prop": "pagination.pageSize",
+                    "des": "每页条目数",
+                    "type": "Number",
+                    "options": "-",
+                    "default": 10
+                },
+                {
+                    "prop": "pagination.bind",
+                    "des": "el-pagination 绑定属性值",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "pagination.bind",
+                    "des": "el-pagination 绑定事件",
+                    "type": "Object",
+                    "options": "-",
+                    "default": "-"
+                },
+                {
+                    "prop": "search",
+                    "des": "获取数据接口",
+                    "type": "Function(filters, pagination)",
+                    "options": "-",
+                    "default": "-"
+                }
+            ]
+        },
+        {
+            "title": "Methods",
+            "table": [
+                {
+                    "prop": "name",
+                    "label": "方法名"
+                },
+                {
+                    "prop": "des",
+                    "label": "说明"
+                },
+                {
+                    "prop": "params",
+                    "label": "参数"
+                }
+            ],
+            "data": [
+                {
+                    "name": "handlerSearch",
+                    "des": "触发搜索",
+                    "params": "-"
+                },
+                {
+                    "name": "getData",
+                    "des": "获取当前列表值",
+                    "params": "-"
+                }
+            ]
+        }
+    ]
+}

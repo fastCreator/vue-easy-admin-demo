@@ -17,5 +17,8 @@
       },
       "remove": "delete:/v2/apis/del"
     }
+  },
+  "store":{
+    "myname":"张三"
   }
 }

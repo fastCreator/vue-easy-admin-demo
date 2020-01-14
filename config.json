@@ -7,5 +7,6 @@
     "theme": "",
     "show": true
   },
-  "components": ["vue-element-ui-expand"]
+  "globData":{
+  }
 }
