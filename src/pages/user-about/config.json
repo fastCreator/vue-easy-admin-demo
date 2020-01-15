@@ -1,9 +1,15 @@
 {
   "nav": {
-    "title": "用户信息",
+    "title": "tab-1",
     "icon": "el-icon-help",
     "iconSelect": "el-icon-s-help",
-    "parent": ["合唱曲库管理", "合唱曲库管理"]
+    "parents": [
+      "nav-1",
+      "nav-1-2"
+    ],
+    "lazy": true,
+    "noCache": true,
+    "affix": true
   },
   "permission": {
     "basic": {
@@ -19,6 +25,6 @@
     }
   },
   "store":{
-    "myname":"张三"
+    "userName":"123123"
   }
 }

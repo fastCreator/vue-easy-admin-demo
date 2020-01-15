@@ -1,7 +1,14 @@
 {
   "nav": {
-    "title": "用户信息",
-    "glob":true
+    "title": "tab-0",
+    "icon": "el-icon-help",
+    "iconSelect": "el-icon-s-help",
+    "parents": [
+      "nav1"
+    ],
+    "lazy": true,
+    "noCache": true,
+    "affix": true
   },
   "permission": {
     "basic": {

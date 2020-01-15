@@ -22,5 +22,14 @@
   },
   "globData": {
     "globName": "XXXXX"
+  },
+  "api": {
+    "baseURL": {
+      "dev": "/",
+      "build": "/"
+    },
+    "config": {
+      "timeout": 1000
+    }
   }
 }
