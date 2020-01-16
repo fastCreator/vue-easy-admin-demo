@@ -9,13 +9,6 @@
     "basic": {
       "getTree": "get:/v1/apis/tree",
       "getTableList": "get:/v2/apis/tableList"
-    },
-    "fuc": {
-      "add": {
-        "add": "post:/platform/v1/add",
-        "getSelecte": "get:/v1/apis/getlist3"
-      },
-      "remove": "delete:/v2/apis/del"
     }
   },
   "store":{

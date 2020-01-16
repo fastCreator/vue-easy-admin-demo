@@ -1,14 +1,6 @@
 {
   "nav": {
-    "title": "tab-0",
-    "icon": "el-icon-help",
-    "iconSelect": "el-icon-s-help",
-    "parents": [
-      "nav1"
-    ],
-    "lazy": true,
-    "noCache": true,
-    "affix": true
+    "title": "暂无权限"
   },
   "permission": {
     "basic": {
@@ -28,10 +20,6 @@
         "apis": {
           "add": "delete:/platform/v1/add/{userId}"
         }
-      },
-      "page": {
-        "title": "页面跳转参数",
-        "pages": "full/user-info"
       }
     }
   }

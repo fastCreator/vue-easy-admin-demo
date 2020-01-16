@@ -23,10 +23,26 @@
   "globData": {
     "globName": "XXXXX"
   },
-  "api": {
+  "request": {
+    "errorTime": 5000,
+    "codeKey": "code",
+    "tokenOverCode": 2000,
+    "successCode": 200,
+    "msgKey": "message",
+    "dataKey": "data",
     "baseURL": {
       "dev": "/",
       "build": "/"
+    },
+    "error": {
+      "status": {
+        "en": "Network exception, please try again later",
+        "zh-CN": "网络异常，请稍候再试"
+      },
+      "tokenOver": {
+        "en": "You have signed out, you can cancel to stay on this page, or confirm to sign in again",
+        "zh-CN": "您已注销，您可以取消以停留在此页，或确定重新登录"
+      }
     },
     "config": {
       "timeout": 1000

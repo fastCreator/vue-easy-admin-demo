@@ -7,6 +7,7 @@
       "nav-1",
       "nav-1-2"
     ],
+    "hide": true,
     "lazy": true,
     "noCache": true,
     "affix": true
@@ -16,7 +17,7 @@
       "getTree": "get:/v1/apis/tree",
       "getTableList": "get:/v2/apis/tableList"
     },
-    "fuc": {
+    "function": {
       "add": {
         "add": "post:/platform/v1/add",
         "getSelecte": "get:/v1/apis/getlist3"
@@ -24,7 +25,7 @@
       "remove": "delete:/v2/apis/del"
     }
   },
-  "store":{
-    "userName":"123123"
+  "store": {
+    "userName": "123123"
   }
 }
