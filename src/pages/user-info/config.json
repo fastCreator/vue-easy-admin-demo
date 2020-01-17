@@ -1,9 +1,12 @@
 {
   "nav": {
-    "title": "用户信息",
+    "title": "页面3",
     "icon": "el-icon-help",
     "iconSelect": "el-icon-s-help",
-    "parents": ["nav-1", "nav2-1"]
+    "parents": [
+      "菜单1",
+      "菜单1-2"
+    ]
   },
   "permission": {
     "basic": {
@@ -11,7 +14,7 @@
       "getTableList": "get:/v2/apis/tableList"
     }
   },
-  "store":{
-    "myname":"张三"
+  "store": {
+    "myname": "张三"
   }
 }

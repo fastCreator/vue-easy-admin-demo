@@ -1,10 +1,10 @@
 {
   "nav": {
-    "title": "tab-0",
+    "title": "页面1",
     "icon": "el-icon-help",
     "iconSelect": "el-icon-s-help",
     "parents": [
-      "nav1"
+      "菜单1"
     ],
     "lazy": true,
     "noCache": true,
@@ -30,8 +30,13 @@
         }
       },
       "page": {
-        "title": "页面跳转参数",
-        "pages": "full/user-info"
+        "title": "页面跳转操作",
+        "apis": {
+          "add": "delete:/platform/v1/add/{userId}"
+        },
+        "goPages": [
+          "full/login"
+        ]
       }
     }
   }

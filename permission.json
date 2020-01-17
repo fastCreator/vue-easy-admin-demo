@@ -1,0 +1,96 @@
+[
+  {
+    "title": "菜单1",
+    "children": [
+      {
+        "title": "新增",
+        "apis": [
+          "post:/platform/v1/add",
+          "get:/v1/apis/getlist3"
+        ],
+        "code": "external-link-add"
+      },
+      {
+        "title": "删除",
+        "apis": [
+          "delete:/platform/v1/add/{userId}"
+        ],
+        "code": "external-link-remove"
+      },
+      {
+        "title": "页面跳转参数",
+        "apis": [
+          "delete:/platform/v1/add/{userId}",
+          "get:/v1/apis/tree",
+          "get:/v2/apis/tableList",
+          "get:/v1/apis/tree",
+          "get:/v2/apis/tableList",
+          "get:/v1/apis/tree",
+          "get:/v2/apis/tableList",
+          "get:/v1/apis/tree",
+          "get:/v2/apis/tableList"
+        ],
+        "code": "external-link-page"
+      },
+      {
+        "title": "菜单1-2",
+        "children": [],
+        "code": "user-info",
+        "apis": [
+          "get:/v1/apis/tree",
+          "get:/v2/apis/tableList"
+        ]
+      }
+    ],
+    "code": "external-link",
+    "apis": [
+      "get:/v1/apis/tree",
+      "get:/v2/apis/tableList"
+    ]
+  },
+  {
+    "title": "菜单2",
+    "children": [
+      {
+        "title": "菜单2-1",
+        "children": [
+          {
+            "title": "新增",
+            "apis": [
+              "post:/platform/v1/add",
+              "get:/v1/apis/getlist3"
+            ],
+            "code": "user-about-add"
+          },
+          {
+            "title": "删除",
+            "apis": [
+              "delete:/platform/v1/add/{userId}"
+            ],
+            "code": "user-about-remove"
+          },
+          {
+            "title": "页面跳转参数",
+            "apis": [
+              "delete:/platform/v1/add/{userId}",
+              "get:/v1/apis/tree",
+              "get:/v2/apis/tableList",
+              "get:/v1/apis/tree",
+              "get:/v2/apis/tableList",
+              "get:/v1/apis/tree",
+              "get:/v2/apis/tableList",
+              "get:/v1/apis/tree",
+              "get:/v2/apis/tableList"
+            ],
+            "code": "user-about-page"
+          }
+        ],
+        "code": "user-about",
+        "apis": [
+          "get:/v1/apis/tree",
+          "get:/v2/apis/tableList"
+        ]
+      }
+    ]
+  }
+]
