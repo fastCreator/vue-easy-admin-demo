@@ -1,6 +1,10 @@
 {
-    "message": {
-        "zh-CN": "消息",
-        "en": "Message"
+    "loginForm": {
+        "zh-CN": "登录表单",
+        "en": "login from"
+    },
+    "login": {
+        "zh-CN": "登录",
+        "en": "login"
     }
 }

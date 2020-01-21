@@ -97,6 +97,21 @@ export default {
         }
       }
     },
-    loading: {}
+    loading: {
+      timeout: 4000 // 最长loading时长
+    },
+    theme: {
+      defalut: 'blue',
+      list: [
+        {
+          label: '蓝色主题',
+          value: 'blue'
+        },
+        {
+          label: '黄色主题',
+          value: 'yellow'
+        }
+      ]
+    }
   }
 }
