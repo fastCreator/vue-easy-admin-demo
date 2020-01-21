@@ -44,15 +44,7 @@ export default {
       }
     },
     store: {
-      globData: {
-        setting: {
-          logo: true,
-          fixedHeader: true,
-          tagView: true,
-          theme: '',
-          show: true
-        }
-      }
+      globData: {}
     },
     router: {
       nProgress: { showSpinner: false },
@@ -70,7 +62,7 @@ export default {
       },
       async getPermission () {
         // return request.get('/permission').then(d => d.data)
-        return []
+        return ['user-info']
       },
       whitePages: ['full/401'],
       loginUrl: '/full/login',
@@ -112,6 +104,22 @@ export default {
           value: 'yellow'
         }
       ]
+    },
+    layout: {
+      sidebar: {
+        logo: {
+          title: {
+            en: 'VUE ADMIN',
+            'zh-CN': '基础产品后台'
+          },
+          logo:
+            'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png',
+          link: '/',
+          collapse: false,
+          showLogo: true
+        },
+        menu: {}
+      }
     }
   }
 }
