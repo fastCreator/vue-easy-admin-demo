@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "title": "页面1",
+    "icon": "el-icon-help",
+    "iconSelect": "el-icon-s-help",
+    "parents": [
+      "菜单1"
+    ],
+    "lazy": true,
+    "noCache": true,
+    "affix": true
+  },
+  "permission": {
+    "basic": {
+      "getTree": "get:/v1/apis/tree",
+      "getTableList": "get:/v2/apis/tableList"
+    },
+    "function": {
+      "add": {
+        "title": "新增",
+        "apis": {
+          "add": "post:/platform/v1/add",
+          "getSelecte": "get:/v1/apis/getlist3"
+        }
+      },
+      "remove": {
+        "title": "删除",
+        "apis": {
+          "add": "delete:/platform/v1/add/{userId}"
+        }
+      },
+      "page": {
+        "title": "页面跳转操作",
+        "apis": {
+          "add": "delete:/platform/v1/add/{userId}"
+        },
+        "goPages": [
+          "full/login"
+        ]
+      }
+    }
+  }
+}

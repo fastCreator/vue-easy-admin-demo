@@ -1,3 +1,5 @@
 {
-  "dependencies": {}
+  "dependencies": {
+    "vue-element-ui-expand": "^0.9.1"
+  }
 }

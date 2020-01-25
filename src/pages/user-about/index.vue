@@ -1,0 +1,17 @@
+<template>
+  <div class="about">
+    <h1>This is an about page</h1>
+    <h2>
+      
+    </h2>
+    <!-- <el-button v-permission="add">新增</el-button> -->
+    <!-- <div>{{ data }}</div> -->
+  </div>
+</template>
+<script>
+export default {
+  created () {
+    // this.API.getTable()
+  }
+}
+</script>

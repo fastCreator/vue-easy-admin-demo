@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "title": "页面3",
+    "icon": "el-icon-help",
+    "iconSelect": "el-icon-s-help",
+    "parents": [
+      "菜单1",
+      "菜单1-2"
+    ]
+  },
+  "permission": {
+    "basic": {
+      "getTree": "get:/v1/apis/tree",
+      "getTableList": "get:/v2/apis/tableList"
+    }
+  },
+  "store": {
+    "myname": "张三"
+  }
+}
