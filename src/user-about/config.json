@@ -9,6 +9,7 @@
     ],
     "lazy": true,
     "noCache": true,
+    "global": true,
     "affix": true
   },
   "permission": {
