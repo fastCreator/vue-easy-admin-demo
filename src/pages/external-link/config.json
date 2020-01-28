@@ -1,14 +1,12 @@
 {
   "nav": {
     "title": "页面1",
-    "icon": "el-icon-help",
-    "iconSelect": "el-icon-s-help",
+    "icon": "dashboard",
     "parents": [
       "菜单1"
     ],
     "lazy": true,
-    "noCache": true,
-    "affix": true
+    "noCache": true
   },
   "permission": {
     "basic": {

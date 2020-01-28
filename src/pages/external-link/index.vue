@@ -2,6 +2,7 @@
   <div class="about">
     <h1>This is an link page</h1>
     <el-button @click="switchLang">切换语言</el-button>
+     <el-input v-model="v"/>
     <!-- <el-button v-permission="add">新增</el-button> -->
     <!-- <div>{{ data }}</div> -->
     <h2>
@@ -12,7 +13,44 @@
         :total="400"
       >
       </el-pagination>
-      <p>{{ $l('message') }}</p>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
+      <div>{{ $l('message') }}</div>
     </h2>
   </div>
 </template>
@@ -20,6 +58,7 @@
 export default {
   data () {
     return {
+      v: '2',
       value: new Date()
     }
   },

@@ -1,12 +1,16 @@
 {
   "nav": {
     "title": "页面3",
-    "icon": "el-icon-help",
-    "iconSelect": "el-icon-s-help",
+    "icon": "dashboard",
     "parents": [
       "菜单1",
-      "菜单1-2"
-    ]
+      "菜单1-2",
+      {
+        "title": "页面1",
+        "path": "/pages/external-link"
+      }
+    ],
+    "hide": true
   },
   "permission": {
     "basic": {

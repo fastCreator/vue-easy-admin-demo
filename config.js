@@ -3,7 +3,9 @@ import vueElementUiExpand from '../vue-element-ui-expand'
 export default {
   init ({ Vue, router, store, Element, nav, request }) {
     //修改菜单
-    nav[0].icon = 'XXXXX'
+    nav.forEach(it => {
+      it.icon = 'message'
+    })
     //添加组件库
     Vue.use(vueElementUiExpand)
   },
@@ -118,7 +120,16 @@ export default {
           collapse: false,
           showLogo: true
         },
-        menu: {}
+        menu: {
+          backgroundColor: '#545c64',
+          textColor: "#fff",
+          activeTextColor: "#ffd04b"
+        }
+      },
+      setting: {
+        show: true,
+        affixHeader: true,
+        tagsView: false
       }
     }
   }
