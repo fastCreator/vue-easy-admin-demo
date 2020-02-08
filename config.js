@@ -1,9 +1,9 @@
 import vueElementUiExpand from '../vue-element-ui-expand'
 
 export default {
-  init ({ Vue, router, store, Element, nav, request }) {
+  init ({ Vue, router, store, Element, request, layout: { navs } }) {
     //修改菜单
-    nav.forEach(it => {
+    navs.forEach(it => {
       it.icon = 'message'
     })
     //添加组件库
@@ -21,42 +21,39 @@ export default {
           label: 'English',
           value: 'en'
         }
-      ]
+      ],
+      messages: {
+        loading: {
+          'zh-CN': '加载中',
+          'en': 'loading'
+        }
+      }
     },
     request: {
+      create: {
+        baseURL: process.env.NODE_ENV === 'development' ? '/' : '',
+        timeout: 1000
+      },
       format: {
         codeKey: 'code',
         successCode: 200,
         msgKey: 'message',
         dataKey: 'data'
       },
-      error: {
-        time: 5000,
-        message: {
-          en: 'Network exception, please try again later',
-          'zh-CN': '网络异常，请稍候再试'
-        }
-      },
-      baseURL: {
-        dev: '/',
-        build: '/'
-      },
-      config: {
-        timeout: 1000
-      }
-    },
-    store: {
-      globData: {}
+
     },
     router: {
-      nProgress: { showSpinner: false },
       indexPage () {
         return '/pages/user-info'
-      }
+      },
+      nProgress: { showSpinner: false }
+    },
+    store: {
+      state: {},
+      mutations: {}
     }
   },
   sass: {
-    nav: {},
     permission: {
       async getUserInfo () {
         // return request.get('/userInfo').then(d => d.data)
@@ -106,6 +103,11 @@ export default {
           value: 'yellow'
         }
       ]
+    },
+    mock: {
+      'globApi' () {
+        console.log('待完成')
+      }
     },
     layout: {
       sidebar: {
