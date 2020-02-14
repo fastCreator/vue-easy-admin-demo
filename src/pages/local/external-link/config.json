@@ -9,6 +9,7 @@
     "noCache": true
   },
   "permission": {
+    "share": true,
     "basic": {
       "getTree": "get:/v1/apis/tree",
       "getTableList": "get:/v2/apis/tableList"

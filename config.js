@@ -25,7 +25,7 @@ export default {
       messages: {
         loading: {
           'zh-CN': '加载中',
-          'en': 'loading'
+          en: 'loading'
         }
       }
     },
@@ -39,8 +39,7 @@ export default {
         successCode: 200,
         msgKey: 'message',
         dataKey: 'data'
-      },
-
+      }
     },
     router: {
       indexPage () {
@@ -105,7 +104,7 @@ export default {
       ]
     },
     mock: {
-      'globApi' () {
+      globApi () {
         console.log('待完成')
       }
     },
@@ -124,14 +123,17 @@ export default {
         },
         menu: {
           backgroundColor: '#545c64',
-          textColor: "#fff",
-          activeTextColor: "#ffd04b"
+          textColor: '#fff',
+          activeTextColor: '#ffd04b'
         }
+      },
+      header: {
+        affixHeader: true,
+        tagsView: false
       },
       setting: {
         show: true,
-        affixHeader: true,
-        tagsView: false
+        list: []
       }
     }
   }

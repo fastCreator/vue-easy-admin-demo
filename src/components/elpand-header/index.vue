@@ -5,7 +5,6 @@
 export default {
     name: 'elpand-header',
     created () {
-        console.log(1111111)
     }
 }
 </script>
