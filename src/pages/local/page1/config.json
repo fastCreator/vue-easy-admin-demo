@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "title": "页面1",
+    "icon": "dashboard",
+    "parents": [
+      "菜单1",
+      {
+        "en": "nav1-1",
+        "zh-CN": "菜单1-1"
+      }
+    ]
+  },
+  "permission": {
+    "apis": [
+      "get:/v1/apis/testData/{id}"
+    ],
+    "goPages": [
+      "local/page2"
+    ],
+    "function": [
+      {
+        "code": "add",
+        "title": "新增",
+        "apis": [
+          "post:/platform/v1/add"
+        ],
+        "goPages": [
+          "local/page2"
+        ]
+      }
+    ]
+  }
+}

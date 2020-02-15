@@ -1,13 +1,12 @@
-import vueElementUiExpand from '../vue-element-ui-expand'
-
+import vueEasyAdminComponents from 'vue-easy-admin-components'
 export default {
-  init ({ Vue, router, store, Element, request, layout: { navs } }) {
+  init ({ Vue, router, store, Element, request, navs, loading }) {
     //修改菜单
-    navs.forEach(it => {
-      it.icon = 'message'
+    navs.registerDealNavs(function (navs) {
+      if (navs[0]) navs[0].icon = 'message'
     })
     //添加组件库
-    Vue.use(vueElementUiExpand)
+    Vue.use(vueEasyAdminComponents)
   },
   iass: {
     language: {
@@ -21,18 +20,12 @@ export default {
           label: 'English',
           value: 'en'
         }
-      ],
-      messages: {
-        loading: {
-          'zh-CN': '加载中',
-          en: 'loading'
-        }
-      }
+      ]
     },
     request: {
       create: {
         baseURL: process.env.NODE_ENV === 'development' ? '/' : '',
-        timeout: 1000
+        timeout: 5000
       },
       format: {
         codeKey: 'code',
@@ -43,7 +36,7 @@ export default {
     },
     router: {
       indexPage () {
-        return '/pages/user-info'
+        return '/local/page1'
       },
       nProgress: { showSpinner: false }
     },
@@ -54,41 +47,34 @@ export default {
   },
   sass: {
     permission: {
-      async getUserInfo () {
-        // return request.get('/userInfo').then(d => d.data)
-        return { name: '张三' }
+      getUserInfo (request) {
+        return request.net('get:/v1/apis/userInfo')
       },
-      async getPermission () {
-        // return request.get('/permission').then(d => d.data)
-        return ['user-info']
+      getPermission (request) {
+        return request.net('get:/v1/apis/permission')
       },
-      whitePages: ['full/401'],
+      whiteAPI: ['get:/v1/apis/userInfo','get:/v1/apis/userInfo','get:/v1/apis/permission'],
       loginUrl: '/full/login',
       headerKey: 'token',
       token: {
-        refresh () {
-          return Promise.resolve('XXXXXX')
-          // return request.get('/resetToken').then(d => d.code)
+        refresh (request) {
+          return request.net('get:/v1/apis/refreshToken')
         },
         get () {
           return localStorage.token
         },
         set (token) {
-          return (localStorage.token = token)
+          localStorage.token = token
         },
         remove () {
           localStorage.removeItem('token')
         },
-        overCode: 4001,
-        overMsg: {
-          en:
-            'You have signed out, you can cancel to stay on this page, or confirm to sign in again',
-          'zh-CN': '您已注销，您可以取消以停留在此页，或确定重新登录'
-        }
+        OverTimeCode: 4001,
+        InvalidCode: 4002
       }
     },
     loading: {
-      timeout: 4000 // 最长loading时长
+      timeout: 15000 // 最长loading时长
     },
     theme: {
       defalut: 'blue',
@@ -103,20 +89,14 @@ export default {
         }
       ]
     },
-    mock: {
-      globApi () {
-        console.log('待完成')
-      }
-    },
     layout: {
       sidebar: {
         logo: {
           title: {
             en: 'VUE ADMIN',
-            'zh-CN': '基础产品后台'
+            'zh-CN': 'VUE后台管理'
           },
-          logo:
-            'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png',
+          logo: 'public/logo.png',
           link: '/',
           collapse: false,
           showLogo: true
@@ -129,7 +109,7 @@ export default {
       },
       header: {
         affixHeader: true,
-        tagsView: false
+        tagsView: true
       },
       setting: {
         show: true,
