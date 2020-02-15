@@ -1,4 +1,7 @@
 {
+  "name": "vue-easy-admin-demo",
+  "version": "1.0.0",
+  "description": "vue-easy-admin-demo",
   "author": "ZhangGuo",
   "license": "ISC",
   "scripts": {
@@ -6,7 +9,8 @@
     "build": "easy-admin run build",
     "permission": "easy-admin permission",
     "lint": "easy-admin run lint",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "test": "gh-pages -d dist"
   },
   "devDependencies": {
     "@vue/babel-preset-app": "^4.2.2",
