@@ -1523,10 +1523,10 @@ universalify@^0.1.0:
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
   integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
 
-vue-easy-admin-components@^0.9.2:
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/vue-easy-admin-components/-/vue-easy-admin-components-0.9.2.tgz#2d844b5a5550cf8d86373a785e41190605be548b"
-  integrity sha512-PUlitixoNHpPYxObR0Me/TPL55z54BL4EQ3VOGvp9nBmcnrly6j+snmMxwbS1qOj2iYoQdeLjDo7n2BCziW0Gg==
+vue-easy-admin-components@0.9.3:
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/vue-easy-admin-components/-/vue-easy-admin-components-0.9.3.tgz#952191498527c6772912116116a1916dbd6c357e"
+  integrity sha512-jRpC/LA5vsMGOaY9ZoQObkeCwxd+GzJznkoZcPYN93TFoR5Odc8ESmqd5pbQ2qbeBr3pzLznb3iCMK9qz+rBiw==
 
 wrappy@1:
   version "1.0.2"

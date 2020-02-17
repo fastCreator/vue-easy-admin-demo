@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "title": {
+      "en": "Document",
+      "zh-CN": "文档"
+    },
+    "icon": "dashboard"
+  },
+  "iframe": {
+    "src": "https://fastcreator.github.io/vue-easy-admin-doc"
+  }
+}

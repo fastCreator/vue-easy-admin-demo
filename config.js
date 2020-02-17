@@ -1,4 +1,4 @@
-import vueEasyAdminComponents from 'vue-easy-admin-components'
+import vueEasyAdminComponents from '../vue-easy-admin-components'
 export default {
   init ({ Vue, router, store, Element, request, navs, loading }) {
     //修改菜单
@@ -43,22 +43,54 @@ export default {
     store: {
       state: {},
       mutations: {}
+    },
+    layout: {
+      sidebar: {
+        logo: {
+          title: {
+            en: 'VUE ADMIN',
+            'zh-CN': 'VUE后台管理'
+          },
+          logo: 'public/logo.png',
+          link: '/',
+          collapse: false,
+          showLogo: true
+        },
+        menu: {
+          backgroundColor: '#545c64',
+          textColor: '#fff',
+          activeTextColor: '#ffd04b'
+        }
+      },
+      header: {
+        affixHeader: true,
+        tagsView: true
+      },
+      setting: {
+        show: true,
+        list: []
+      }
     }
   },
   sass: {
     permission: {
       getUserInfo (request) {
-        return request.net('get:/v1/apis/userInfo')
+        return Promise.resolve({ name: '张三' })
       },
       getPermission (request) {
-        return request.net('get:/v1/apis/permission')
+        return Promise.resolve(['page1','page2'])
       },
-      whiteAPI: ['get:/v1/apis/userInfo','get:/v1/apis/userInfo','get:/v1/apis/permission'],
+      whiteSource: ['document'],
+      whiteAPI: [
+        'get:/v1/apis/userInfo',
+        'get:/v1/apis/userInfo',
+        'get:/v1/apis/permission'
+      ],
       loginUrl: '/full/login',
       headerKey: 'token',
       token: {
         refresh (request) {
-          return request.net('get:/v1/apis/refreshToken')
+          return Promise.resolve('token1')
         },
         get () {
           return localStorage.token
@@ -88,33 +120,6 @@ export default {
           value: 'yellow'
         }
       ]
-    },
-    layout: {
-      sidebar: {
-        logo: {
-          title: {
-            en: 'VUE ADMIN',
-            'zh-CN': 'VUE后台管理'
-          },
-          logo: 'public/logo.png',
-          link: '/',
-          collapse: false,
-          showLogo: true
-        },
-        menu: {
-          backgroundColor: '#545c64',
-          textColor: '#fff',
-          activeTextColor: '#ffd04b'
-        }
-      },
-      header: {
-        affixHeader: true,
-        tagsView: true
-      },
-      setting: {
-        show: true,
-        list: []
-      }
     }
   }
 }

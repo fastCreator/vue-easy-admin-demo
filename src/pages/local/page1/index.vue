@@ -2,6 +2,43 @@
   <div class="page-one">
     page-one
     <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
+    <el-input v-model="value" />
   </div>
 </template>
 <script>
