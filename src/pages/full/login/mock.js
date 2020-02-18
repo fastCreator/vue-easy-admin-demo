@@ -1,5 +1,8 @@
 module.exports = {
   'post:/v1/apis/login' (req) {
-    return Promise.resolve('token1')
+    return {
+      code: 200,
+      data: 'token1'
+    }
   }
 }

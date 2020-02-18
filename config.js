@@ -78,9 +78,9 @@ export default {
         return Promise.resolve({ name: '张三' })
       },
       getPermission (request) {
-        return Promise.resolve(['page1','page2'])
+        return Promise.resolve(['page1', 'page2'])
       },
-      whiteSource: ['document'],
+      whiteSource: ['openNew'],
       whiteAPI: [
         'get:/v1/apis/userInfo',
         'get:/v1/apis/userInfo',
