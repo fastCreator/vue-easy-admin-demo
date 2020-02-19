@@ -8,7 +8,9 @@
         "en": "nav1-1",
         "zh-CN": "菜单1-1"
       }
-    ]
+    ],
+    "isWhite": true,
+    "priority": 1
   },
   "permission": {
     "apis": [

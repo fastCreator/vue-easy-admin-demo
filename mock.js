@@ -9,7 +9,12 @@ module.exports = {
     }
   },
   'get:/v1/apis/permission' (req) {
-    const token = req.get('token')
+    let token
+    if (req.get) {
+      token = req.get('token')
+    } else {
+      token = localStorage.token
+    }
     if (token === 'token2') {
       return {
         code: '4001'

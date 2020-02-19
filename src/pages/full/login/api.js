@@ -1,5 +1,5 @@
 export default {
   login () {
-    return Promise.resolve('token1')
+    return this.$net('post:/v1/apis/login', { body: this.loginForm })
   }
 }

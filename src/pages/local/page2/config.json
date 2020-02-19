@@ -4,7 +4,8 @@
     "icon": "dashboard",
     "parents": [
       "菜单2"
-    ]
+    ],
+    "isWhite": true
   },
   "permission": {
     "apis": [

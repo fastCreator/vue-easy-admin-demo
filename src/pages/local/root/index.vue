@@ -1,7 +1,6 @@
 <template>
   <div class="page-one">
-    page-tow
-    <el-input v-model="value" />
+    <el-button disabled="disabled">打开</el-button>
   </div>
 </template>
 <script>
@@ -12,6 +11,11 @@ export default {
     }
   },
   created () {},
-  methods: {}
+  methods: {},
+  computed:{
+    disabled(){
+      return this.$service.permission.hasPermission('root.open')
+    }
+  }
 }
 </script>

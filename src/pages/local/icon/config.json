@@ -5,6 +5,7 @@
       "zh-CN": "图标"
     },
     "icon": "dashboard",
-    "isWhite": true
+    "isWhite": true,
+    "priority": -10
   }
 }

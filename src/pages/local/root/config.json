@@ -1,7 +1,9 @@
 {
   "nav": {
     "title": "权限控制",
-    "icon": "dashboard"
+    "icon": "dashboard",
+    "isWhite": true
+    
   },
   "permission": {
     "apis": [

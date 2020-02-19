@@ -76,10 +76,10 @@ export default {
   sass: {
     permission: {
       getUserInfo (request) {
-        return Promise.resolve({ name: '张三' })
+        return request.net('get:/v1/apis/userInfo')
       },
-      getPermission (request) {
-        return Promise.resolve(['page1', 'page2'])
+      async getPermission (request) {
+        return request.net('get:/v1/apis/permission')
       },
       whiteSource: ['openNew'],
       whiteAPI: [
