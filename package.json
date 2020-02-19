@@ -8,7 +8,6 @@
     "serve": "easy-admin run serve",
     "build": "easy-admin run build",
     "permission": "easy-admin permission",
-    "lint": "easy-admin run lint",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
@@ -17,7 +16,9 @@
     "eslint": "^5.16.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-vue": "^5.0.0",
-    "gh-pages": "^2.2.0"
+    "gh-pages": "^2.2.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7"
   },
   "dependencies": {
     "element-ui": "^2.13.0",
