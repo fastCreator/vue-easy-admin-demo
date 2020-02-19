@@ -58,7 +58,7 @@ export default {
         },
         menu: {
           backgroundColor: '#545c64',
-          textColor: '#fff',
+          textColor: '#ffffff',
           activeTextColor: '#ffd04b'
         }
       },

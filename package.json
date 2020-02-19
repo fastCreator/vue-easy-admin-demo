@@ -30,5 +30,16 @@
     "easy-admin",
     "vue components"
   ],
-  "homepage": "https://fastcreator.github.io/vue-easy-admin-demo/"
+  "homepage": "https://fastcreator.github.io/vue-easy-admin-demo/",
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint --ext .js,.vue src"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
 }
