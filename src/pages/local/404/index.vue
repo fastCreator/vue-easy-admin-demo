@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>404</h1>
+    <h1>404444</h1>
   </div>
 </template>
 <script>

@@ -23,6 +23,7 @@ export default {
       ]
     },
     request: {
+      mock: true,
       create: {
         baseURL: process.env.NODE_ENV === 'development' ? '/' : '',
         timeout: 5000
