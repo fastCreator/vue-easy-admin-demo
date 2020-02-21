@@ -1,7 +1,5 @@
 module.exports = {
   'get:/v1/apis/tableList' (req) {
-    console.log(1111111111)
-    console.log()
     let arr = new Array(req.query.pageSize-0).fill(0)
     return {
       code: 200,
