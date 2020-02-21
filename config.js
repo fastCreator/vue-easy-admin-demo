@@ -1,14 +1,18 @@
-import vueEasyAdminComponents from '../vue-easy-admin-components'
+import { elpandTable, elpandSelect } from '../vue-easy-admin-components'
 export default {
   init ({ Vue, router, store, Element, request, navs, loading }) {
     //修改菜单
     navs.registerDealNavs(function (navs) {
       if (navs[0]) navs[0].icon = 'message'
     })
-    //添加组件库
-    Vue.use(vueEasyAdminComponents)
+    Vue.use(elpandTable)
+    Vue.use(elpandSelect)
   },
   iass: {
+    element: {
+      size: 'small',
+      zIndex: 3000
+    },
     language: {
       defalut: 'en',
       list: [
@@ -23,7 +27,7 @@ export default {
       ]
     },
     request: {
-      mock: true,
+      // mock: true,
       create: {
         baseURL: process.env.NODE_ENV === 'development' ? '/' : '',
         timeout: 5000
@@ -44,7 +48,9 @@ export default {
     store: {
       state: {},
       mutations: {}
-    },
+    }
+  },
+  sass: {
     layout: {
       sidebar: {
         logo: {
@@ -71,9 +77,7 @@ export default {
         show: true,
         list: []
       }
-    }
-  },
-  sass: {
+    },
     permission: {
       getUserInfo (request) {
         return request.net('get:/v1/apis/userInfo')

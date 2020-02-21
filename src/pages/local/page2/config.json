@@ -3,7 +3,11 @@
     "title": "页面2",
     "icon": "dashboard",
     "parents": [
-      "菜单2"
+      "多级菜单",
+      {
+        "en": "nav1-1",
+        "zh-CN": "菜单1-1"
+      }
     ],
     "isWhite": true
   },
