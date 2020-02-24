@@ -14,7 +14,7 @@
   },
   "permission": {
     "apis": [
-      "get:/v1/apis/testData/{id}"
+      "get:/v1/apis/tableList"
     ],
     "goPages": [
       "local/page2"

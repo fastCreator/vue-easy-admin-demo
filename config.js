@@ -1,4 +1,9 @@
-import { elpandTable, elpandSelect } from '../vue-easy-admin-components'
+import globLang from './globLang'
+import {
+  elpandTable,
+  elpandForm,
+  elpandSelect
+} from '../vue-easy-admin-components'
 export default {
   init ({ Vue, router, store, Element, request, navs, loading }) {
     //修改菜单
@@ -6,6 +11,7 @@ export default {
       if (navs[0]) navs[0].icon = 'message'
     })
     Vue.use(elpandTable)
+    Vue.use(elpandForm)
     Vue.use(elpandSelect)
   },
   iass: {
@@ -24,10 +30,11 @@ export default {
           label: 'English',
           value: 'en'
         }
-      ]
+      ],
+      glob: globLang
     },
     request: {
-      // mock: true,
+      mock: true,
       create: {
         baseURL: process.env.NODE_ENV === 'development' ? '/' : '',
         timeout: 5000

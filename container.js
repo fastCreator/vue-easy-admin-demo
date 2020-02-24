@@ -7,6 +7,8 @@ module.exports = {
       return definitions
     })
   },
-  configureWebpack: {
+  configureWebpack: {},
+  other: {
+    publicPath: './'
   }
 }

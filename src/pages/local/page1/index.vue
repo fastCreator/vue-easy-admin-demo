@@ -1,14 +1,34 @@
 <template>
   <div class="page-container page-one">
-    <elpand-table v-bind="table" />
+    <elpand-table ref="table" v-bind="table" />
+    <elpand-form ref="form" v-bind="form" />
   </div>
 </template>
 <script>
+import CONST from './const'
 export default {
   data () {
-    let that = this
-    return {
-      table: {
+    return {}
+  },
+  beforeCreate () {},
+  created () {},
+  methods: {},
+  computed: {
+    CONST () {
+      const { $lang, $globLang } = this
+      return CONST({ $lang, $globLang })
+    },
+    table () {
+      const { $lang, $globLang } = this
+      let that = this
+
+      console.log(this)
+      return {
+        text: {
+          // search: this.$lang.glob.search,
+          // reset: this.$lang.glob.reset,
+          // export: this.$lang.glob.export,
+        },
         tableSort (evt, data, cb) {
           console.log(evt, data)
           //接口调用成功后执行cb()
@@ -17,7 +37,7 @@ export default {
         tableExport: {
           filter (row, prop) {
             if (prop === 'sex') {
-              return row.sex ? '男' : '女'
+              return row.sex ? $globLang.man : $globLang.woman
             }
             return row[prop]
           },
@@ -28,24 +48,24 @@ export default {
         tableFilter: true,
         filters: [
           {
-            label: '输入框',
+            label: this.$lang.name,
             prop: 'input',
             tag: 'el-input'
           },
           {
-            label: '选择框',
+            label: this.$lang.sex,
             prop: 'select',
             tag: 'elpand-select',
-            default: 'zhangsan',
+            default: '',
             bind: {
-              options: [{ label: '张三', value: 'zhangsan' }]
+              options: this.CONST.sex
             }
           }
         ],
         table: {
           data: 'list',
           bind: {
-            height: 'calc(100% - 115px)',
+            height: 'calc(100% - 140px)',
             rowKey: 'id',
             border: true
           },
@@ -55,24 +75,24 @@ export default {
             }
           },
           columns: [
-            { type: 'selection', bind: { width: '55' } },
+            { type: 'selection', bind: { width: '35' } },
             {
               type: 'time',
               format: 'yyyy-MM-dd hh:mm:ss',
-              label: '出生时间',
+              label: $lang.birthday,
               prop: 'birth'
             },
-            { type: 'image', label: '头像', prop: 'header' },
+            { type: 'image', label: $lang.head, prop: 'header' },
             {
               component: { tag: 'el-input', bind: {}, on: {} },
-              label: '输入框',
+              label: $lang.input,
               prop: 'input'
             },
             {
               component: {
                 tag: 'elpand-select',
                 bind: {
-                  options: this.getOptions,
+                  options: that.getOptions,
                   optionsProps: {
                     label: 'label',
                     value: 'value'
@@ -80,45 +100,44 @@ export default {
                 },
                 on: {}
               },
-              label: '下拉选择框',
+              label: $lang.select,
               prop: 'select'
             },
-            { label: '姓名', prop: 'name' },
-            { label: '年龄', prop: 'age' },
+            { label: $lang.name, prop: 'name' },
+            { label: $lang.age, prop: 'age' },
             {
               type: 'color',
-              label: '喜欢颜色',
+              label: $lang.color,
               prop: 'color',
               bind: { width: '80' }
             },
             {
               type: 'audio',
-              label: '喜欢音乐',
+              label: $lang.likeMusic,
               prop: 'audio',
               bind: { width: '320' }
             },
             {
-              label: '性别',
+              type: 'map',
+              label: $lang.sex,
               prop: 'sex',
-              render (h, props) {
-                return props.row.sex ? '男' : '女'
-              }
+              list: this.CONST.sex
             },
             {
-              label: '家属',
+              label: $lang.family,
               child: [
-                { prop: 'mother', label: '母亲' },
-                { prop: 'father', label: '父亲' }
+                { prop: 'mother', label: $lang.mother },
+                { prop: 'father', label: $lang.father }
               ]
             },
             {
-              label: '操作',
+              label: $globLang.operation,
               bind: { width: '200' },
               type: 'btns',
               btns (props) {
                 let btns = [
                   {
-                    label: '删除',
+                    label: $globLang.delete,
                     type: 'danger',
                     confirm: '你确认删除吗？',
                     call (props, handlerSearch) {
@@ -149,7 +168,7 @@ export default {
         },
         operations: [
           {
-            label: '删除',
+            label: $globLang.delete,
             confirm: '你确定删除吗？',
             call (selection, search) {
               console.log(selection)
@@ -161,9 +180,18 @@ export default {
             }
           },
           {
-            label: '获取表单数据',
+            label: $globLang.add,
+            call (selection, search) {
+              that.$refs.form.open($globLang.add)
+            },
+            bind: {
+              type: 'primary'
+            }
+          },
+          {
+            label: '获取table数据',
             call: () => {
-              let tableFef = this.$refs.table
+              let tableFef = that.$refs.table
               // 获取表单数据
               console.log(tableFef.getData())
             }
@@ -171,7 +199,7 @@ export default {
           {
             label: '主动触发search',
             call: () => {
-              let tableFef = this.$refs.table
+              let tableFef = that.$refs.table
               tableFef.handlerSearch()
             }
           }
@@ -190,10 +218,41 @@ export default {
           return that.$api.getTableData({ ...filters, ...pagination })
         }
       }
+    },
+    form () {
+      let that = this
+      return {
+        dialogBind: {
+          width: '800px',
+          confirm: true
+        },
+        list (data, title) {
+          return [
+            {
+              label: '姓名',
+              prop: 'name',
+              tag: 'el-input',
+              bind: {
+                placeholder: '输入姓名方可出现性别'
+              }
+            },
+            {
+              label: '性别',
+              prop: 'sex',
+              tag: 'elpand-select',
+              hide: !data.name,
+              bind: {
+                options: [{ label: '张三', value: 'zhangsan' }]
+              }
+            }
+          ]
+        },
+        async submit (o) {
+          that.$refs.table.handlerSearch()
+        }
+      }
     }
-  },
-  created () {},
-  methods: {}
+  }
 }
 </script>
 <style lang="less">

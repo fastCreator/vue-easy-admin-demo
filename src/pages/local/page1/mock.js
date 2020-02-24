@@ -1,19 +1,22 @@
+var Mock = require('mockjs')
+const { Random } = Mock
 module.exports = {
-  'get:/v1/apis/tableList' (req) {
-    let arr = new Array(req.query.pageSize-0).fill(0)
+  async 'get:/v1/apis/tableList' (req, delay) {
+    await delay(200)
+    let arr = new Array(req.query.pageSize - 0).fill(0)
     return {
       code: 200,
       data: {
         list: arr.map(it => ({
           id: Math.random(),
-          name: '张三',
-          age: parseInt(Math.random() * 80),
-          sex: 0,
-          mother: '吴**',
-          father: '张**',
-          birth: '2000-01-02',
-          color: 'red',
-          input: '输入值1',
+          name: Random.name(),
+          age: Random.integer(10, 40),
+          sex: Random.integer(0, 1),
+          mother: Random.name(),
+          father: Random.name(),
+          birth: Random.integer(582532131587, 1582532131587),
+          color: Random.rgb(),
+          input: Random.word(),
           select: 'zhangsan',
           audio: 'http://m4a.inke.cn/sktv/ori/m4a_64/12/20/1000382_9605.m4a',
           header:
