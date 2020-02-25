@@ -21,8 +21,6 @@ export default {
     table () {
       const { $lang, $globLang } = this
       let that = this
-
-      console.log(this)
       return {
         text: {
           // search: this.$lang.glob.search,

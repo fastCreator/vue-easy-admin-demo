@@ -1,6 +1,7 @@
 <template>
   <div class="page-one">
-    <el-button disabled="disabled">打开</el-button>
+    <el-button :disabled="!$hasPermission('root.root1')">权限1</el-button>
+    <el-button :disabled="!$hasPermission('root.root2')">权限2</el-button>
   </div>
 </template>
 <script>
@@ -13,9 +14,6 @@ export default {
   created () {},
   methods: {},
   computed:{
-    disabled(){
-      return this.$service.permission.hasPermission('root.open')
-    }
   }
 }
 </script>
