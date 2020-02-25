@@ -19,6 +19,10 @@
         "zh-CN": "新增",
         "en": "add"
     },
+    "edit": {
+        "zh-CN": "编辑",
+        "en": "edit"
+    },
     "enable": {
         "zh-CN": "启用",
         "en": "add"

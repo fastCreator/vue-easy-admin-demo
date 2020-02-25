@@ -146,21 +146,19 @@ export default {
                     }
                   },
                   {
-                    label: '禁用 ',
+                    label: $globLang.unable,
                     bind: {
                       disabled: true
                     }
+                  },
+                  {
+                    label: $globLang.edit,
+                    type: 'primary',
+                    call (props, handlerSearch) {
+                      that.$refs.form.open($globLang.edit, props.row)
+                    }
                   }
                 ]
-                if (props.row.status === 1) {
-                  btns.push({
-                    label: '隐藏',
-                    call (props, handlerSearch) {
-                      console.log(props)
-                      handlerSearch()
-                    }
-                  })
-                }
                 return btns
               }
             }
@@ -242,12 +240,13 @@ export default {
               tag: 'elpand-select',
               hide: !data.name,
               bind: {
-                options: [{ label: '张三', value: 'zhangsan' }]
+                options: that.CONST.sex
               }
             }
           ]
         },
         async submit (o) {
+          console.log(o)
           that.$refs.table.handlerSearch()
         }
       }
