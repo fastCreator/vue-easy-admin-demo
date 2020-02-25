@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0abfbc"],{1832:function(n,a,e){"use strict";e.r(a),a["default"]=function(n){n.$lang;var a=n.$globLang;return{sex:[{label:a.man,value:0},{label:a.woman,value:1}]}}}}]);
