@@ -1,1 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0c11d6"],{4554:function(t,e,n){"use strict";n.r(e),e["default"]={getTableData:function(t){return this.$net("get:/v1/apis/tableList",{query:t})}}}}]);

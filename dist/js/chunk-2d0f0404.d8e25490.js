@@ -1,1 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0f0404"],{"9c26":function(n,o,i){"use strict";i.r(o),o["default"]={login:function(){return this.$net("post:/v1/apis/login",{body:this.loginForm})}}}}]);
