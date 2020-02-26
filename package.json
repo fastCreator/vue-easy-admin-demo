@@ -8,11 +8,13 @@
     "serve": "easy-admin run serve",
     "build": "easy-admin run build",
     "permission": "easy-admin permission",
-    "deploy": "bash deploy.sh"
+    "deploy": "bash deploy.sh",
+    "commit": "npx git-cz"
   },
   "devDependencies": {
     "@vue/babel-preset-app": "^4.2.2",
     "babel-eslint": "^10.0.3",
+    "commitizen": "^4.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-vue": "^5.0.0",
@@ -46,5 +48,10 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
