@@ -8,7 +8,7 @@
     "serve": "easy-admin run serve",
     "build": "easy-admin run build",
     "permission": "easy-admin permission",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "bash deploy.sh"
   },
   "devDependencies": {
     "@vue/babel-preset-app": "^4.2.2",
