@@ -1,8 +1,8 @@
 <template>
-  <div class="page-container page-one">
+  <el-card class="page-container page-one">
     <elpand-table ref="table" v-bind="table" />
     <elpand-form ref="form" v-bind="form" />
-  </div>
+  </el-card>
 </template>
 <script>
 import CONST from './const'
@@ -25,7 +25,7 @@ export default {
         text: {
           search: that.$globLang.search,
           reset: that.$globLang.reset,
-          export: that.$globLang.export,
+          export: that.$globLang.export
         },
         tableSort (evt, data, cb) {
           console.log(evt, data)
@@ -63,7 +63,7 @@ export default {
         table: {
           data: 'list',
           bind: {
-            height: 'calc(100% - 140px)',
+            height: 'calc(100% - 120px)',
             rowKey: 'id',
             border: true
           },
@@ -81,26 +81,6 @@ export default {
               prop: 'birth'
             },
             { type: 'image', label: $lang.head, prop: 'header' },
-            {
-              component: { tag: 'el-input', bind: {}, on: {} },
-              label: $lang.input,
-              prop: 'input'
-            },
-            {
-              component: {
-                tag: 'elpand-select',
-                bind: {
-                  options: that.getOptions,
-                  optionsProps: {
-                    label: 'label',
-                    value: 'value'
-                  }
-                },
-                on: {}
-              },
-              label: $lang.select,
-              prop: 'select'
-            },
             { label: $lang.name, prop: 'name' },
             { label: $lang.age, prop: 'age' },
             {

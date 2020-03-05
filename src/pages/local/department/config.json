@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "title": "部门管理",
+    "isWhite": true,
+    "parentCode": "setting",
+    "icon": "tree"
+  },
+  "permission": {
+    "apis": [
+      "get:/v1/apis/department"
+    ]
+  }
+}
