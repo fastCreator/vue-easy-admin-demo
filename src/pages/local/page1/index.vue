@@ -23,9 +23,9 @@ export default {
       let that = this
       return {
         text: {
-          // search: this.$lang.glob.search,
-          // reset: this.$lang.glob.reset,
-          // export: this.$lang.glob.export,
+          search: that.$globLang.search,
+          reset: that.$globLang.reset,
+          export: that.$globLang.export,
         },
         tableSort (evt, data, cb) {
           console.log(evt, data)

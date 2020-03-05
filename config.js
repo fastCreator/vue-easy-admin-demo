@@ -67,7 +67,6 @@ export default {
           },
           logo: 'public/logo.png',
           link: '/',
-          collapse: false,
           showLogo: true
         },
         menu: {
