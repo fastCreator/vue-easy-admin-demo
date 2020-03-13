@@ -10,8 +10,7 @@ export default {
   data () {
     return {}
   },
-  beforeCreate () {
-  },
+  beforeCreate () {},
   created () {},
   methods: {},
   computed: {
@@ -23,42 +22,21 @@ export default {
       const { $lang, $globLang } = this
       let that = this
       return {
-        text: {
-          search: that.$globLang.search,
-          reset: that.$globLang.reset,
-          export: that.$globLang.export
-        },
-        tableSort (evt, data, cb) {
-          console.log(evt, data)
-          //接口调用成功后执行cb()
-          cb()
-        },
-        tableExport: {
-          filter (row, prop) {
-            if (prop === 'sex') {
-              return row.sex ? $globLang.man : $globLang.woman
-            }
-            return row[prop]
-          },
-          filename: 'excel-list',
-          autoWidth: true,
-          bookTypes: ['xlsx', 'xlsm', 'csv', 'txt']
-        },
-        tableFilter: true,
         filters: [
           {
-            label: this.$lang.name,
+            label: '姓名',
             prop: 'input',
             tag: 'el-input'
           },
           {
-            label: this.$lang.sex,
+            label: '部门',
             prop: 'select',
-            tag: 'elpand-select',
-            default: '',
+            tag: 'elpand-cascader',
             bind: {
-              options: this.CONST.sex
-            }
+              options: that.$api.getDepartment,
+              a: 111
+            },
+            default: []
           }
         ],
         table: {

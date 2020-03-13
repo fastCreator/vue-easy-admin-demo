@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "title": "用户管理",
+    "isWhite": true,
+    "parentCode": "setting",
+    "icon": "user"
+  },
+  "permission": {
+    "apis": [
+      "get:/v1/apis/tableList"
+    ],
+    "goPages": [
+      "local/page2"
+    ],
+    "function": [
+      {
+        "code": "add",
+        "title": "新增",
+        "apis": [
+          "post:/platform/v1/add"
+        ],
+        "goPages": [
+          "local/page2"
+        ]
+      }
+    ]
+  }
+}

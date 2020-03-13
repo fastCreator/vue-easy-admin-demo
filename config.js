@@ -1,6 +1,7 @@
 import globLang from './globLang'
 import {
   elpandTable,
+  elpandCascader,
   elpandForm,
   elpandSelect
 } from '../vue-easy-admin-components'
@@ -13,6 +14,7 @@ export default {
     Vue.use(elpandTable)
     Vue.use(elpandForm)
     Vue.use(elpandSelect)
+    Vue.use(elpandCascader)
   },
   iass: {
     element: {
@@ -34,7 +36,6 @@ export default {
       glob: globLang
     },
     request: {
-      mock: true,
       create: {
         baseURL: process.env.NODE_ENV === 'development' ? '/' : '',
         timeout: 5000

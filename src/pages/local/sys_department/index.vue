@@ -14,10 +14,10 @@
       :filter-node-method="filterNode"
       ref="tree"
     >
-      <span class="custom-tree-node" slot-scope="{ node }">
+      <span class="custom-tree-node" slot-scope="{ node, data }">
         <span class="text">{{ node.label }}</span>
         <span class="operation">
-          <el-button type="primary">
+          <el-button type="primary" @click="edit(data)">
             编辑
           </el-button>
           <el-button type="danger">
@@ -56,12 +56,19 @@ export default {
     add () {
       this.$refs.form.open('新增')
     },
+    edit (data) {
+      this.$refs.form.open('编辑', { name: data.label })
+    },
     deleteMuti () {
-      this.$confirm(`删除${this.$refs.tree.getCheckedKeys()}, 是否继续?`, '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        type: 'warning'
-      })
+      this.$confirm(
+        `删除${this.$refs.tree.getCheckedKeys()}, 是否继续?`,
+        '提示',
+        {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }
+      )
     },
     async getDepartment () {
       let data = await this.$api.getDepartment()
